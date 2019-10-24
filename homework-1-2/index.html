@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>homevork-1-2</title>
+</head>
+<body>
+
+	<form action="" style="width: 800px; margin: 0 auto;">
+
+		<fieldset>
+			<legend><b>Коротко о себе</b></legend>
+
+			<label>Имя: <input type="text" name="name"></label><br><br>
+			<label>Фамилия: <input type="text" name="lastname"></label><br><br>
+
+			<span>Пол:</span>
+			<label><input type="radio" name="state" id="male" checked="">мужской</label>
+			<label><input type="radio" name="state" id="female">женский</label>
+
+			<br><br>
+
+			<label for="age">Возвраст:</label>
+			<input type="number" name="age" id="age" min="14" placeholder="14" size="3" style="width: 50px;">
+			<span>лет.</span>
+		</fieldset>
+
+		<br>
+
+		<fieldset>
+			<legend><b>Подробно о себе</b></legend>
+			
+					<label><input type="radio" name="stat" id="youngMan" checked="">Молодой человек</label>
+					<br>
+					<label><input type="radio" name="stat" id="youngGirl">Девушка</label>
+					<br>
+					<label><input type="date" name="name" style="width: 156px;"> Дата рождения</label><br>
+					<label><input type="text" name="name"> Семейное положение</label><br>
+					<label><input type="text" name="name"> Социальный статус</label><br>
+					<label><input type="text" name="name"> Местожительство</label><br>
+
+				<p><b>Что вы обычно делаете на выходных:</b></p>
+
+					<label><input type="checkbox"> Сплю</label><br>
+					<label><input type="checkbox"> Гуляю с друзьями</label><br>
+					<label><input type="checkbox"> Хожу на рыбалку</label><br>
+					<label><input type="checkbox"> Играю в игры</label><br>
+				
+				<p><b>Рассказать о формах в книге, посвященной HTML:</b></p>
+
+				<select name="FormTypes" id="FormTypes" style="width: 156px;">
+					<option value="1">text</option>
+					<option value="2">password</option>
+					<option value="3">email</option>
+					<option value="4">number</option>
+					<option value="5">radio</option>
+					<option value="6">checkbox</option>
+					<option value="7">date</option>
+					<option value="7">file</option>
+					<option value="7">range</option>
+					<option value="7">search</option>
+				</select>
+
+				<p><b>Сколько книг вы прочитали за свою жизнь:</b></p>
+
+					<label><input type="radio" name="number_of_books">0-10</label><br>
+					<label><input type="radio" name="number_of_books">11-20</label><br>
+					<label><input type="radio" name="number_of_books">21-50</label><br>
+					<label><input type="radio" name="number_of_books">50+</label><br><br>
+
+				<label for="comment"><b>Ваши комментарии:</b></label>
+				<br>
+				<textarea name="comment" id="comment" cols="50" rows="10"></textarea>
+				
+				<br><br>
+				
+				<select name="Positions" id="Positions" size="3" style="width: 156px;">
+					<option value="1">Первая позиция:</option>
+					<option value="2">Вторая позиция:</option>
+					<option value="3">Третья позиция:</option>
+					<option value="4">Четвертая позиция:</option>
+					<option value="5">Пьятая позиция:</option>
+					<option value="6">Шестая позиция:</option>
+				</select>
+				
+				<br><br>
+
+		</fieldset>
+
+		<br>
+
+		<fieldset>
+			<legend><b>И в заключении</b></legend>
+
+					<input type="text" placeholder="Это поле было введено до вас" style="width: 256px;">
+					 <br><br>
+					 <label for="email"><b>Email:</b></label><br>
+					<input type="email" name="email" id="email" pattern="[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}" style="width: 256px;">
+					
+				<p>
+					<b>Хотите подписаться на самую модную рассылку спама?</b>
+					<br>
+					<em>Выберите категории</em>
+				</p>
+
+					<label><input type="checkbox"> Оборудование</label><br>
+					<label><input type="checkbox"> Как приготовить обед</label><br>
+					<label><input type="checkbox"> Заработай миллион за два дня!</label><br>
+
+					<p><b>На сколько сложная задача:</b></p>
+
+					<label><input type="radio" name="verdict">Совсем нет</label><br>
+					<label><input type="radio" name="verdict" checked="">Было интересно</label><br>
+					<label><input type="radio" name="verdict">Еле справился</label><br>			
+		</fieldset>
+
+			<br>
+
+		  <input type="submit" value="Отправить">
+
+	</form>
+	
+</body>
+</html>
