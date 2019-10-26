@@ -7,26 +7,29 @@
 <body>
 
 	<form action="" style="width: 800px; margin: 0 auto;">
-
+		
+		<p>
 		<fieldset>
 			<legend><b>Коротко о себе</b></legend>
 
-			<label>Имя: <input type="text" name="name"></label><br><br>
-			<label>Фамилия: <input type="text" name="lastname"></label><br><br>
+			<p><label>Имя: <input type="text" name="name"></label></p>
+			<p><label>Фамилия: <input type="text" name="lastname"></label></p>
 
+			<p>
 			<span>Пол:</span>
 			<label><input type="radio" name="state" id="male" checked="">мужской</label>
 			<label><input type="radio" name="state" id="female">женский</label>
-
-			<br><br>
-
+			</p>
+			
+			<p>
 			<label for="age">Возвраст:</label>
-			<input type="number" name="age" id="age" min="14" placeholder="14" size="3" style="width: 50px;">
+			<input type="number" name="age" id="age" min="14" placeholder="14" style="width: 50px;">
 			<span>лет.</span>
+		   </p>
 		</fieldset>
-
-		<br>
-
+      </p>
+		
+		<p>
 		<fieldset>
 			<legend><b>Подробно о себе</b></legend>
 			
@@ -39,14 +42,14 @@
 					<label><input type="text" name="name"> Социальный статус</label><br>
 					<label><input type="text" name="name"> Местожительство</label><br>
 
-				<p><b>Что вы обычно делаете на выходных:</b></p>
+				<h4><b>Что вы обычно делаете на выходных:</b></h4>
 
 					<label><input type="checkbox"> Сплю</label><br>
 					<label><input type="checkbox"> Гуляю с друзьями</label><br>
 					<label><input type="checkbox"> Хожу на рыбалку</label><br>
 					<label><input type="checkbox"> Играю в игры</label><br>
 				
-				<p><b>Рассказать о формах в книге, посвященной HTML:</b></p>
+				<h4><b>Рассказать о формах в книге, посвященной HTML:</b></h4>
 
 				<select name="FormTypes" id="FormTypes" style="width: 156px;">
 					<option value="1">text</option>
@@ -61,7 +64,7 @@
 					<option value="7">search</option>
 				</select>
 
-				<p><b>Сколько книг вы прочитали за свою жизнь:</b></p>
+				<h4><b>Сколько книг вы прочитали за свою жизнь:</b></h4>
 
 					<label><input type="radio" name="number_of_books">0-10</label><br>
 					<label><input type="radio" name="number_of_books">11-20</label><br>
@@ -86,9 +89,9 @@
 				<br><br>
 
 		</fieldset>
-
-		<br>
-
+      </p>
+		
+		<p>
 		<fieldset>
 			<legend><b>И в заключении</b></legend>
 
@@ -113,8 +116,8 @@
 					<label><input type="radio" name="verdict" checked="">Было интересно</label><br>
 					<label><input type="radio" name="verdict">Еле справился</label><br>			
 		</fieldset>
-
-			<br>
+	   </p>
+			
 
 		  <input type="submit" value="Отправить">
 
