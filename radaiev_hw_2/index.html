@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework-2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="libs/fontawesome/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="overlay_background"></div>
+
+
+
+			<!-- header -->
+		<header class="header">
+
+				
+			<aside class="cookies">
+				<div class="cookies_text">
+					<p>
+						This site uses cookies, so that my service can work better. 
+					</p>
+				</div>
+				<div class="cookies_button">
+					<a href="#">Accept</a>
+				</div>
+			</aside>
+
+
+
+			<nav class="nav">
+				<div id="nav_burg">
+					<a href="#">
+						<span class="bar" id="top"></span>
+						<span class="bar" id="middle"></span>
+						<span class="bar" id="bottom"></span>
+					</a>
+				</div>
+
+				<div class="overlay_menu">
+					<div class="overlay_menu_btn_close"></div>
+
+					<ul>
+						<li class="overlay_menu_item"><a href="#titleAboutMe" id="AboutMe">About Me</a></li>
+						<li class="overlay_menu_item"><a href="#titleExpertIn" id="Services">Services</a></li>
+						<li class="overlay_menu_item"><a href="#titleLatestWorks" id="MyWorks">My Works</a></li>
+						<li class="overlay_menu_item"><a href="#titleClients" id="Clients">Clients</a></li>
+					</ul>
+
+					<hr class="overlay_menu_hr">
+
+					<div class="overlay_menu_icons">
+						<div class="overlay_menu_icon">
+								<a href="#"><i class="fab fa-facebook-square"></i></a>
+								<a href="#"><i class="fab fa-vk"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+
+					<div class="overlay_menu_language_icon">
+						<span>ENG</span>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="37" height="22" viewBox="0 0 37 22">
+						  <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAWCAMAAABwrqUyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACoFBMVEX////////Y3utPXZ8AAGYABGoAJn4AJX4AJH0ABms4V5zmYm/HAAnPFCvHAArkXGo8W58ABWpMW53W3OrT2ejV2+kAEXEAEnIAFXQAInyt0+//8efMAxzNDCTODSXLABn/7eOx2PIAB2wAFnUAD3DR1+fa3+xSYaEAAGcAAmkAA2lQXqD///+utdMnN4gAAGEAEnIAKH8AJH0ABms4V5zmYm/HAAnPFCvHAArkXGo8W58ABWoAE3MlNYerstGDi7oDF3UAAGIAHnoAJ38AH3oCFnWAibn+//93gLP3+/3c4u1VYKAAAWgAAmkABGw6WZ0+XaAABGsAA2kAAGdSXp/a4Oz5/P56g7UAAGAdLoKiqcyzutYsO4sAAE0iRJEmSJQqOYmxt9SkrM0fL4QAAGNATpbJz+Nyfq40VJv7///8//83V51ve6zM0uRDUJcABGoACG0AAFMAAF1NXJ7P1eb19/v6///fXGzeV2j09/rR1+dQXp8AAF4AAFIAA2oACW2t0++t1/Ghx+eGpdPE5/reZHPGAATGAAXeXm/G6Pugxuf/8ef/8uj/9On/3dv1zNHaTF3JBBDJBBHaSFrMAxzODybQFS3ODyfNDCTPEinPFSzODSXLABnODibQFi7/7eP/7eT/8OX/2tj0yc7aS1zJBRHJBRLaR1n/2dix2PKx3PWmzOuKqtfF6fzeZHTeX2/H6/2lzOsAB2wAAFRLWZ3N1Ob3+fzP1uYABWsACm0+S5TGzeF1gbA2Vpw5WZ5xfa7Iz+IZK4Gepsq3vdgwPowgQpAlR5MAAEwtPIu1u9ahqMsbLYJzfLH0+Pvf5O9YZKMAA2tWYaHd4u72+vx2f7OFjrwFGXYAHnkEF3WDi7uyuNUqOokAEXIoN4mvttMAAADKnapxAAAALHRSTlPl8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8ucBOmYAAAABYktHRN+eadINAAAACXBIWXMAAAsSAAALEgHS3X78AAAB7ElEQVQoz2NgYGRkZGJmYWVj5+Dg4ORi5Obh5eNnFBAE8tjZWFmEhIHyDAw6YKCrp29gaGRkbKJjamZuYaljZW1kZGijb2sHkWYQgdA69g6OTs5IqpxdHF3d3CFyogxiHp4Qppe3j6+fP1RVQGBQcEgoRCIsXJxBIiIyCmpcdExsHFRVfGxCIlQ0KVlfgkHSyDolNQ0qkp6RCVaVlZ0DFcnNS8k3kmTgNC7ILywqLoEIlpaVA1VVZFZCuFXVNbV19cacDFINDQ2NTc0tUL06rW3m7R0wTmdzVyNQXopBuhsIenr7+qFgwkTzSZNhnL7eHpC0NIPMFFQwdZr5tOloYjIMsjNQwcxZ5rNmoonJMsjNRgVgVWhicgzyc1DB3Hnm8+aiickzKMwHggULFy2GgiVLzZcth3FWLFwAklZgUFy5cuWq1WvWwjy/DhgS62GcDWs2rgLKKzIobao33ly0ZStEeFsmJFS3Qbjbi2s279i5SQkYQ8aOu3ZD9e7ZC42hffuhIgdSHa2BMaSsf/AQVOTwkdij0Ng+dvzESajoqdP6ygwqZ85CeOfO+/ogUs4FH5+LlyASl6+IMahCtVy95ngdJRU6Od64CZUTgaboW7f172CkaAP9u/egKRqUO9TUNTSx5g4tFm0mUO4AACbVGQrTOajzAAAAAElFTkSuQmCC" width="37" height="22"/>
+						</svg>
+
+					</div>
+				</div>
+			</nav>
+
+
+
+			<div class="header_img_circle">
+				<img src="img/Circle.png" alt="Circle">
+			</div>
+
+
+
+			<div class="header_title">
+				<h1>
+					free portfolio PSD template FOR GRAPHIC designerS 
+             </h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 				
+				</p>
+			</div>
+
+
+			<form action="" class="overlay_form">
+				<div class="overlay_form_btn_close"></div>
+				
+				<div class="overlay_flex_wrap">
+
+					<h2 class="subtitle">Hire Me</h2>
+
+					<div class="overlay_form_Name">
+						<input class="yourName" type="text" placeholder="Your Name">
+					</div>
+
+					<div class="overlay_form_E-mail">
+						<input class="yourEmail" type="email" placeholder="Your E-Mail">
+					</div>
+
+					<div class="overlay_form_Message">
+						<textarea class="yourMessage" name="message" id="mesage" rows="10"  placeholder="Your Message"></textarea>
+					</div>
+
+					<div class="overlay_form_btn_send">
+						<input type="submit" value="SEND MESSAGE">
+					</div>
+				</div>
+			</form>
+
+
+
+			<div class="header_button">
+				<a class="btn_hire-me" href="#">HIRE ME</a>
+			</div>
+
+
+
+			<div class="header_arrow_down">
+				<a href="#titleAboutMe" class="bb">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="19" height="32" viewBox="0 0 19 32">
+					  <defs>
+					    <style>
+					      .cls-1 {
+					        opacity: 0.6;
+					      }
+					    </style>
+					 </defs>
+					  <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADlNUBSAAAAJnRSTlMAC2MeE2YmWzRIGQleWgYfQT4jBVhfF2VLTC4CURIPYlQWKCpASSRpq/AAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAj0lEQVQoz+3SyRKCMBAE0AnYkpCwb8qO6P//ooAREs4e7ctUvUMyXTVEOsxx6ZwLrn/7kXn8ZNwjAd8yH4KkCkLDwkBJogixYTGidSRId0uRbC9kecG0sSLPPj+V1U3bvSq/+3DUm9Xg+45N63SLdU7bHCX6YZzwGIfebDbjiRdmu64AlgJ2pMJawI573Nob+x4G0s552z8AAAAASUVORK5CYII=" width="19" height="32" class="cls-1"/>
+					</svg>
+				</a>
+			</div>
+
+		</header>
+			<!-- header /-->
+
+
+			<!-- main -->
+		<main class="main">
+
+				<!-- about_me -->
+			<section class="about_me">
+				<div class="content">
+					
+						<h2 class="subtitle" id="titleAboutMe">About Me</h2>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+							esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+						</p>
+					
+				</div>
+			</section>
+				<!-- about_me /-->
+
+
+				<!-- expert_in -->
+			<section class="expert_in">
+				<div class="content">
+					
+						<h2 class="subtitle" id="titleExpertIn">Expert_in</h2>
+
+					<div class="wrapper_container">
+
+						<div class="expert_in_item">
+
+							<div class="expert_in_icon">
+								<img src="img/icon-mobile.png" alt="icon-mobile">
+							</div>
+							<div class="expert_in_item_title">
+								<h3>MOBILE APP DESIGN</h3>
+							</div>
+							<div class="expert_in_item_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At exercitationem obcaecati atque aperiam ducimus quae ex, id, ullam accusamus assumenda.</p>
+							</div>
+						</div>
+
+						<div class="expert_in_item">
+
+							<div class="expert_in_icon">
+								<img src="img/icon-design.png" alt="icon-mobile">
+							</div>
+							<div class="expert_in_item_title">
+								<h3>WEB DESIGN</h3>
+							</div>
+							<div class="expert_in_item_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At exercitationem obcaecati atque aperiam ducimus quae ex, id, ullam accusamus assumenda.</p>
+							</div>
+						</div>
+
+						<div class="expert_in_item">
+
+							<div class="expert_in_icon">
+								<img src="img/icon-development.png" alt="icon-mobile">
+							</div>
+							<div class="expert_in_item_title">
+								<h3>WEB DEVELOPMENT</h3>
+							</div>
+							<div class="expert_in_item_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At exercitationem obcaecati atque aperiam ducimus quae ex, id, ullam accusamus assumenda.</p>
+							</div>
+						</div>
+
+						<div class="expert_in_item">
+
+							<div class="expert_in_icon">
+								<img src="img/icon-product.png" alt="icon-mobile">
+							</div>
+							<div class="expert_in_item_title">
+								<h3>PRODUCT DESIGN</h3>
+							</div>
+							<div class="expert_in_item_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At exercitationem obcaecati atque aperiam ducimus quae ex, id, ullam accusamus assumenda.</p>
+							</div>
+						</div>
+
+						<div class="expert_in_item">
+
+							<div class="expert_in_icon">
+								<img src="img/icon-ux_ui.png" alt="icon-mobile">
+							</div>
+							<div class="expert_in_item_title">
+								<h3>UX & UI</h3>
+							</div>
+							<div class="expert_in_item_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At exercitationem obcaecati atque aperiam ducimus quae ex, id, ullam accusamus assumenda.</p>
+							</div>
+						</div>
+
+						<div class="expert_in_item">
+
+							<div class="expert_in_icon">
+								<img src="img/icon-animation.png" alt="icon-mobile">
+							</div>
+							<div class="expert_in_item_title">
+								<h3>ANIMATIONS</h3>
+							</div>
+							<div class="expert_in_item_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At exercitationem obcaecati atque aperiam ducimus quae ex, id, ullam accusamus assumenda.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+				<!-- expert_in /-->
+				
+
+				<!-- latest_works -->
+			<section class="latest_works">
+					
+
+					<div class="full_view_work">
+						<div class="full_view_work_btn_close"></div>
+
+						<header class="full_view_work_header">
+							<div class="full_view_work_icon margin-left">
+								<img src="img/icon-design.png" alt="web design">
+							</div>
+							<div class="full_view_work_title margin-left">
+								<h2 class="subtitle" id="portfolio">Portfolio PSD Template</h2>
+							</div>
+							<div class="full_view_work_buttons margin-left">
+								<ul>
+									<li><a href="#">web</a></li>
+									<li><a href="#">portfolio</a></li>
+									<li><a href="#">template</a></li>
+								</ul>
+							</div>
+						</header>
+
+						<div class="full_view_work_img_work">
+							<img src="img/full_view_Work.png" alt="full view work">
+						</div>
+					</div>
+
+
+
+				<div class="content">
+					<h2 class="subtitle" id="titleLatestWorks">Latest works</h2>
+						
+					<div class="wrapper_container">
+						
+						<div class="latest_works_item latest_works_item_active">
+							<div class="latest_works_icon">
+								<img src="img/Work1.png" alt="icon work">
+							</div>
+						</div>
+
+						<div class="latest_works_item">
+							<div class="latest_works_icon">
+								<img src="img/Work2.png" alt="icon work">
+							</div>
+						</div>
+
+						<div class="latest_works_item">
+							<div class="latest_works_icon">
+								<img src="img/Work3.png" alt="icon work">
+							</div>
+						</div>
+
+						<div class="latest_works_item">
+							<div class="latest_works_icon">
+								<img src="img/Work4.png" alt="icon work">
+							</div>
+						</div>
+
+						<div class="latest_works_item">
+							<div class="latest_works_icon">
+								<img src="img/Work5.png" alt="icon work">
+							</div>
+						</div>
+
+						<div class="latest_works_item">
+							<div class="latest_works_icon">
+								<img src="img/Work6.png" alt="icon work">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+				<!-- latest_works /-->
+
+
+				<!-- clients -->
+			<section class="clients">
+				<div class="content">
+					
+					<h2 class="subtitle" id="titleClients">Clients</h2>
+
+					<div class="clients_container">
+						<div class="clients_icon">
+							<img src="img/MSFT_logo_png.png" alt="Microsoft">
+						</div>
+
+						<div class="clients_icon">
+							<img src="img/Samsung-logo-2015-Nobg.png" alt="Samsung">
+						</div>
+
+						<div class="clients_icon">
+							<img src="img/ibm_logo.png" alt="IBM">
+						</div>
+
+						<div class="clients_icon">
+							<img src="img/Google_2015_logo.png" alt="Google">
+						</div>
+					</div>
+				</div>
+			</section>
+			   <!-- clients /-->
+
+		</main>
+			<!-- main /-->
+
+
+			<!-- footer -->
+		<footer class="footer">
+		
+				<div class="footer_question">
+					<div class="footer_text">
+						<p>Need a graphic designer? <strong>Ready to work!</strong></p>
+					</div>
+					<div class="footer_button">
+						<a href="#" class="btn_hire-me">HIRE ME</a>
+					</div>
+				</div>		
+		
+		</footer>
+			<!-- footer /-->
+	
+
+	<script type="text/javascript" src="js/jQuery-min.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>
