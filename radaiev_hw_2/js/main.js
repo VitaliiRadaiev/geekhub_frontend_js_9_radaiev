@@ -30,6 +30,11 @@ function closeFullViewWork() {
 
 $('#nav_burg').click(openMenu);
 $('.overlay_menu_btn_close').click(closeMenu);
+$('#AboutMe').click(closeMenu);
+$('#Services').click(closeMenu);
+$('#MyWorks').click(closeMenu);
+$('#Clients').click(closeMenu);
+
 
 $('.btn_hire-me').click(openForm);
 $('.overlay_form_btn_close').click(closeForm);
